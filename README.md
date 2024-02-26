@@ -7,6 +7,9 @@ Features:
 
 Screenshot of the GitFav app:
 
+![image](https://github.com/ricardocbm/rocketseat-stage06-github-favorites-desafio/assets/87211904/e768dc2e-9339-493b-a0d0-4b78beaa6c2f)
+
+
 ![image](https://github.com/ricardocbm/rocketseat-stage06-github-favorites-desafio/assets/87211904/6729b5e0-f106-4f06-85fe-c176aa9b89b2)
 
 See how the app works: 
