@@ -2,7 +2,7 @@
 
 ### A simple app that allows you to favorite GitHub users and repositories so you can easily find them later.
 
-Features:
+**Features:**
 - Browse and search for GitHub users;
 - Add users and repositories to your favorites list;
 - View your favorites list in a table or grid view;
