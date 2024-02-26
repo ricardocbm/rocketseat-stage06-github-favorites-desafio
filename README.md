@@ -2,9 +2,9 @@ GitFav: A simple app that allows you to favorite GitHub users and repositories s
 
 Features:
 
- > Browse and search for GitHub users;
- > Add users and repositories to your favorites list;
- > View your favorites list in a table view;
+ Browse and search for GitHub users;
+ Add users and repositories to your favorites list;
+ View your favorites list in a table view;
 
 Screenshot of the GitFav app:
 
