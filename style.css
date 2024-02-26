@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:wght@400;700&display=swap");
+
+/* Estilos gerais */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+/* Estilos específicos para o corpo da página */
+body {
+  font-size: 1.6rem;
+  background-color: #000;
+}
+
+/* Classe utilitária para acessibilidade */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Estilos específicos para a aplicação */
+#app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5.5rem 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  width: 500px;
+  gap: 10px;
+}
+
+.search input {
+  height: 3.2rem;
+  width: calc(100% - 40px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 0.8rem;
+}
+
+.search button {
+  color: #ccc;
+
+  background-color: #065e7c;
+  border-radius: 5px;
+  height: 3.2rem;
+  border: none;
+  padding: 0 1rem;
+  cursor: pointer;
+  width: 170px;
+}
+
+.search button:hover {
+  color: #065e7c;
+  background-color: #fff;
+}
+
+/* Estilos da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+table * {
+  font-size: 1.4rem;
+  color: #e1e1e6;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 32px */
+}
+
+/* Estilos para corpo da tabela */
+
+table tbody {
+  max-height: fit-content; /* Defina a altura máxima desejada para a tabela */
+  overflow-y: auto; /* Adicione uma barra de rolagem vertical quando necessário */
+}
+
+table th {
+  background: #092d38;
+  text-align: left;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+}
+
+table th:first-child {
+  padding-left: 2rem;
+}
+
+table tr {
+  border-top: 1px solid #4a808c;
+  background: rgb(6, 24, 28);
+}
+
+table tr:nth-child(odd) {
+  border-top: 1px solid #4a808c;
+  background: rgba(6, 22, 27, 0.5);
+}
+
+table td {
+  border: none;
+  text-align: left;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+}
+
+/* Estilos para a célula de usuário na tabela */
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a span {
+  font-weight: 400;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+/* Estilos para o botão de remover */
+td .remove {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.empty-message {
+  display: none; /* Inicialmente, a div estará invisível */
+  text-align: center;
+
+  color: #4e5455;
+  font-family: "Roboto Mono";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24.781px; /* 61.953% */
+
+  padding: 20px;
+  background: rgba(6, 22, 27, 0.5);
+
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+  height: 360px;
+}
+
+.empty-message div {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+}
+
+/* Estilos para a lista suspensa de sugestões de usuários */
+.suggestions-list {
+  position: absolute;
+  width: calc(70% - 1px);
+  max-height: 200px;
+  overflow-y: auto;
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  top: calc(100% + 1px); /* Posiciona a lista abaixo da barra de pesquisa */
+}
+
+.suggestions-list li {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.wrap {
+  border: 3px solid #4a808c;
+  border-radius: 13px;
+}
+
+/* Estilos para o modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(6, 22, 27, 0.5); /* Cor de fundo */
+}
+
+/* Estilos para o conteúdo do modal */
+.modal-content {
+  color: #ccc;
+  font-family: "Roboto";
+  font-size: 3.5rem;
+  background-color: rgba(6, 22, 27, 0.9);
+  margin: auto;
+  padding: 20px;
+  border-radius: 12px; /* Cantos arredondados */
+  width: 500px; /* Largura de 500px */
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para o botão de fechar */
+.close {
+  color: red;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  margin-bottom: 30px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}

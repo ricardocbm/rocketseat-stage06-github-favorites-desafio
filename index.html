@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Importação do arquivo JavaScript principal -->
+  <script src="js/main.js" type="module" defer></script>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Importação do arquivo CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Github Favorites</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <img src="./assets/logo.svg" alt="Logo Git Favorites" />
+
+        <!-- Campo de pesquisa -->
+        <div class="search">
+          <label class="sr-only" for="input-search">Usuário do Github</label>
+          <input
+            id="input-search"
+            type="text"
+            placeholder="Usuário do Github"
+          />
+          <button>
+            <div>&star; Add Favorite</div>
+          </button>
+          <ul id="suggestions-list" class="suggestions-list"></ul>
+        </div>
+      </header>
+
+      <!-- Tabela para exibir os favoritos do Github -->
+      <div class="wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Users</th>
+              <th>Repos</th>
+              <th>Followers</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <!-- Div com mensagem quando a tabela estiver vazia -->
+        <div id="empty-message" class="empty-message">
+          <div>
+            <img
+              src="./assets/star.svg"
+              alt="Imagem de uma estrela com olhos e boca"
+            />
+            No favorites listed yet 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="errorModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="errorMessage"><h2>&#128514;</h2></p>
+      </div>
+    </div>
+  </body>
+</html>
